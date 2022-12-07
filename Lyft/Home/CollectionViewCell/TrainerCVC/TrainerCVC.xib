@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TrainerCVC" customModule="Lyft" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="442"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="442"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HQ-xG-noU">
+                        <rect key="frame" x="0.0" y="0.0" width="366" height="442"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogoBlackBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cVm-50-jgl">
+                                <rect key="frame" x="25" y="20" width="316" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="yjr-A3-trM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b5U-Os-0jY">
+                                <rect key="frame" x="25" y="301" width="316" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admond harb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-Ir-SRk">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crossfit coach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-pu-SZO">
+                                        <rect key="frame" x="0.0" y="34" width="316" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.71634799240000002" green="0.57875567670000005" blue="0.26265442369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MA" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Oo-NFH">
+                                        <rect key="frame" x="0.0" y="60.5" width="316" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.71634799240000002" green="0.57875567670000005" blue="0.26265442369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coach having experience around 10 years" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kM2-qZ-8mr">
+                                        <rect key="frame" x="0.0" y="87" width="316" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zId-AS-FmG">
+                                <rect key="frame" x="271" y="221" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bbi-AL-Kxv"/>
+                                    <constraint firstAttribute="width" constant="40" id="YgD-mk-ubT"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ShareIcon"/>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SKQ-eQ-5fd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cVm-50-jgl" firstAttribute="top" secondItem="5HQ-xG-noU" secondAttribute="top" constant="20" id="AUo-hj-Kc1"/>
+                            <constraint firstItem="cVm-50-jgl" firstAttribute="leading" secondItem="5HQ-xG-noU" secondAttribute="leading" constant="25" id="BAO-K0-qnl"/>
+                            <constraint firstItem="b5U-Os-0jY" firstAttribute="top" secondItem="cVm-50-jgl" secondAttribute="bottom" constant="10" id="OjD-Ce-BD7"/>
+                            <constraint firstAttribute="trailing" secondItem="b5U-Os-0jY" secondAttribute="trailing" constant="25" id="QnH-qX-ceb"/>
+                            <constraint firstAttribute="trailing" secondItem="zId-AS-FmG" secondAttribute="trailing" constant="55" id="RHk-jN-vq6"/>
+                            <constraint firstItem="b5U-Os-0jY" firstAttribute="top" secondItem="zId-AS-FmG" secondAttribute="bottom" constant="40" id="U98-3N-js3"/>
+                            <constraint firstItem="b5U-Os-0jY" firstAttribute="leading" secondItem="5HQ-xG-noU" secondAttribute="leading" constant="25" id="UOB-rf-Gcl"/>
+                            <constraint firstAttribute="trailing" secondItem="cVm-50-jgl" secondAttribute="trailing" constant="25" id="hNV-vS-WD7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5HQ-xG-noU" secondAttribute="trailing" id="6a0-Dz-vgY"/>
+                <constraint firstItem="5HQ-xG-noU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9KJ-CL-nWa"/>
+                <constraint firstItem="5HQ-xG-noU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Xx-9K-jLf"/>
+                <constraint firstAttribute="bottom" secondItem="5HQ-xG-noU" secondAttribute="bottom" id="Xj7-mb-jZt"/>
+            </constraints>
+            <size key="customSize" width="366" height="442"/>
+            <connections>
+                <outlet property="lblTrainerExperienceDetails" destination="kM2-qZ-8mr" id="V0E-Y8-0y5"/>
+                <outlet property="lblTrainerName" destination="VtW-Ir-SRk" id="KRE-hG-Mmq"/>
+                <outlet property="lblTrainerQualification" destination="CBC-Oo-NFH" id="Sge-Pt-I7d"/>
+                <outlet property="lblTrainerSpeciality" destination="Ghc-pu-SZO" id="Ay4-8e-T4e"/>
+                <outlet property="shareButton" destination="zId-AS-FmG" id="D6i-kS-3mT"/>
+                <outlet property="trainerProfileImageView" destination="cVm-50-jgl" id="8ec-6r-tMV"/>
+            </connections>
+            <point key="canvasLocation" x="366.66666666666669" y="257.8125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AppLogoBlackBackground" width="256" height="256"/>
+        <image name="ShareIcon" width="33.5" height="33.5"/>
+    </resources>
+</document>
