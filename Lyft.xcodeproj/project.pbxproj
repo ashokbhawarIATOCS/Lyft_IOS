@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		25E61D7B55B351B2A4057C0C /* Pods_Lyft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766E0C0148D48797CC5C2B24 /* Pods_Lyft.framework */; };
-		B42C47F1292CCF4F00E1E2DC /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C47F0292CCF4F00E1E2DC /* ImagePickerManager.swift */; };
 		B42C47F6292D00B800E1E2DC /* PlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C47F5292D00B800E1E2DC /* PlanVC.swift */; };
 		B42C47FA292D04F000E1E2DC /* PlanTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C47F8292D04F000E1E2DC /* PlanTVC.swift */; };
 		B42C47FB292D04F000E1E2DC /* PlanTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42C47F9292D04F000E1E2DC /* PlanTVC.xib */; };
@@ -165,7 +164,6 @@
 		4F4671EE46E5B037A235A3B2 /* Pods-Lyft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyft.debug.xcconfig"; path = "Target Support Files/Pods-Lyft/Pods-Lyft.debug.xcconfig"; sourceTree = "<group>"; };
 		70D2F4210E1C66CA95755DA2 /* Pods-Lyft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyft.release.xcconfig"; path = "Target Support Files/Pods-Lyft/Pods-Lyft.release.xcconfig"; sourceTree = "<group>"; };
 		766E0C0148D48797CC5C2B24 /* Pods_Lyft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42C47F0292CCF4F00E1E2DC /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		B42C47F5292D00B800E1E2DC /* PlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanVC.swift; sourceTree = "<group>"; };
 		B42C47F8292D04F000E1E2DC /* PlanTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTVC.swift; sourceTree = "<group>"; };
 		B42C47F9292D04F000E1E2DC /* PlanTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTVC.xib; sourceTree = "<group>"; };
@@ -454,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				B479EDEF28F986CD009F95CC /* MyProfileVC.swift */,
-				B42C47F0292CCF4F00E1E2DC /* ImagePickerManager.swift */,
 			);
 			path = MyProfile;
 			sourceTree = "<group>";
@@ -1149,7 +1146,6 @@
 				B4EE5F4128D050D00002A7B0 /* RoundButton.swift in Sources */,
 				B48AB67F28D0680700E8D9DD /* ResetPasswordVC.swift in Sources */,
 				B485E4A72927CB7B003FDED5 /* ChangeLanguageTVC.swift in Sources */,
-				B42C47F1292CCF4F00E1E2DC /* ImagePickerManager.swift in Sources */,
 				B479F06929158688009F95CC /* BMICalcultorTVC.swift in Sources */,
 				B42C47FE292D14D700E1E2DC /* CustomTableViewheaderTVC.swift in Sources */,
 				B437EC92292FB17C00014E58 /* BuySessionTVC.swift in Sources */,
@@ -1369,7 +1365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 36F7JV9VAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lyft/Info.plist;
@@ -1407,7 +1403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 36F7JV9VAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lyft/Info.plist;

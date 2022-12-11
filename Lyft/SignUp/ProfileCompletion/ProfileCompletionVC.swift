@@ -116,7 +116,7 @@ extension ProfileCompletionVC: UITableViewDataSource {
                 }else{
                     self?.selectedResultDictionary["par\(indexPath.row + 1)"] = 0
                 }
-                print(self?.selectedResultDictionary)
+//                print(self?.selectedResultDictionary)
             }
             if UserDefaults.standard.value(forKey: klanguage) as? String == "ar"{
                 switch (indexPath.row) {

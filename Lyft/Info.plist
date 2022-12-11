@@ -4,8 +4,11 @@
 <dict>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>location</string>
 		<string>remote-notification</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Required photo access for profile image</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Required camera access for profile image</string>
 </dict>
 </plist>

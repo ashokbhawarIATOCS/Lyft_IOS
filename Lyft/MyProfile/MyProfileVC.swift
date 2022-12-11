@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyProfileVC: UIViewController,UINavigationControllerDelegate {
+class MyProfileVC: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
@@ -58,11 +58,10 @@ class MyProfileVC: UIViewController,UINavigationControllerDelegate {
         super.viewDidLoad()
 
     }
-    
+    var imagePicker = UIImagePickerController();
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = Constants.myProfile.localize()
-        
         firstNameLabel.text = Constants.firstNameLabel.localize()
         lastNameLabel.text = Constants.lastNameLabel.localize()
         emailLabel.text = Constants.emailLabel.localize()
@@ -84,7 +83,8 @@ class MyProfileVC: UIViewController,UINavigationControllerDelegate {
             self.profileImageView?.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: kUserProfilePicture)! , PlaceHolderImage: UIImage.init(named: "userPlaceholder")!)
             self.backgroundProfileImageView?.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: kUserProfilePicture)! , PlaceHolderImage: UIImage.init(named: "userPlaceholder")!)
         }
-       
+        //set the delegate method for image picker
+        imagePicker.delegate = self
        
         completeProfileButton.isHidden = true
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
@@ -223,17 +223,75 @@ class MyProfileVC: UIViewController,UINavigationControllerDelegate {
         }
     }
     
-    @IBAction func changePhotoButtonAction(_ sender: Any) {
-        ImagePickerManager().pickImage(self){ image in
-                //here is the image
-            self.uplaodProfilePictureAPI(image: image)
-            }
-    }
-    
     @IBAction func completeProfileButtonAction(_ sender: Any) {
         //navigate to the complete profile screen
         let vc = kMainStoryboard.instantiateViewController(withIdentifier: editProfileVCSID) as? BasicProfileVC
         vc?.cameFromScreen = "CompleteProfile"
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    @IBAction func changePhotoButtonAction(_ sender: Any) {
+            let alert = UIAlertController(title: Constants.chooseImageLabel.localize(), message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: Constants.cameraLabel.localize(), style: .default, handler: { _ in
+                self.openCamera()
+            }))
+            
+            alert.addAction(UIAlertAction(title: Constants.galleryLabel.localize(), style: .default, handler: { _ in
+                self.openGallary()
+            }))
+            
+            alert.addAction(UIAlertAction.init(title: Constants.cancel.localize(), style: .cancel, handler: nil))
+            
+            /*If you want work actionsheet on ipad
+            then you have to use popoverPresentationController to present the actionsheet,
+            otherwise app will crash on iPad */
+            imagePicker.delegate = self
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                alert.popoverPresentationController?.sourceView = sender as? UIView
+                alert.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+                alert.popoverPresentationController?.permittedArrowDirections = .up
+            default:
+                break
+            }
+            self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+            if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+            {
+                imagePicker.sourceType = UIImagePickerController.SourceType.camera
+                imagePicker.allowsEditing = true
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            else
+            {
+                let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+    }
+
+func openGallary() {
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        self.uplaodProfilePictureAPI(image: image)
+    }
+
+    @objc func imagePickerController(_ picker: UIImagePickerController, pickedImage: UIImage?) {
+    }
+    
 }
